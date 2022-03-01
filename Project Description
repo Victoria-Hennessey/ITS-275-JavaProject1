@@ -1,2 +1,99 @@
 /** Project leader is Omar, working with Victoria and Mohammed */
 /** Topic: Electronic Billing system for harnett county hospital */
+package Omar; /// This is the name of the Package Omar chose it ///Omar wrote that line
+import java.util.Scanner;  // Needed for the user input ///Omar wrote that line
+
+public class billsystem { /// Identifing the class name and the file name. ///Omar wrote that line
+	public static void main(String[] args) { ///this line is important to Identify what are we going to use in our code for example Strings.
+		Scanner keyboard = new Scanner(System.in);  // Create a Scanner to read input///Omar wrote that line
+		String Name, Phone, Address, Email, SelectDepartment, medicalIssue;   ///To hold a name. Define Variables ///Omar wrote that line
+		int daysStayed; /// declaring thats an Integer ///Omar wrote that line
+		double doctorFee, roomCharge, medPrice, totalFee; /// declare that these variables are double ///Omar wrote that line
+		final double cleaningFee; /// to Identify the constant you need to use the keyword final "Vertex academy.com" ///Omar wrote that line
+		cleaningFee = 35; ///Omar wrote that line
+	    
+	    // print a welcome message
+	    System.out.println("*Electronic billing system*\n"); ///Omar wrote that line
+	     
+	    System.out.println("Enter First Name :"); /// this to show on the screen a space for user to input name ///Omar wrote that line
+        Name = keyboard.nextLine();  // Read user input ///Omar wrote that line
+        
+	    System.out.println("Enter current address :"); /// this to show on the screen a space for user to input name ///Omar wrote that line
+	    Address = keyboard.nextLine(); // Read user input ///Omar wrote that line
+	     
+	    System.out.println("please enter phone Number : "); ///this to show on the screen a space for user to input phone number
+	    Phone= keyboard.nextLine(); // Read user input ///Omar wrote that line
+	    
+	    System.out.println("please enter your primary Email address :"); ///this to show on the screen a space for user to input Email Address
+	    Email = keyboard.nextLine(); // read user input ///Omar wrote that line
+	    
+	    System.out.println("please Enter the number of the doctor you need,\n");
+	    String []  Department = {"A: Dentist", "B: chiropractic", "C: optometrist"};
+	    for (String x : Department) { //for each string element called, print out the value of x chapter 7 github DrGMC
+	    	System.out.println(x);///Omar wrote that line
+	    }
+	    SelectDepartment = keyboard.nextLine(); ///Omar wrote that line
+	    
+	 // get medical issue as input
+	    System.out.println("Enter medical issue : "); ///Omar wrote that line
+	    medicalIssue = keyboard.nextLine(); ///Omar wrote that line
+	    
+	 // ask user to enter number of days patient stayed in room
+	    System.out.println("Enter number of days stayed : "); /// mohamed wrote that line
+	    daysStayed = keyboard.nextInt(); //get the number of days/// mohamed wrote that line
+	    // if patient stayed for less than 5 days, charge them 900 per day for room and 400 per day as doctor's fee /// mohamed wrote that line
+	    if(daysStayed<=5) /// mohamed wrote that line
+	    {
+	    roomCharge = 900 * daysStayed; /// Room charge multiply the days stayed /// mohamed wrote that line
+	    doctorFee = 400 * daysStayed; /// doctorFee multiply the days stayed /// mohamed wrote that line
+	    }
+	    // if patient stayed between 5 to 15 days, charge them 800 per day for room and 300 per day as doctor's fee /// mohamed wrote that line
+	    else if(daysStayed>5 && daysStayed<=15) /// mohamed wrote that line
+	    {
+	    roomCharge = 800 * daysStayed; /// mohamed wrote that line
+	    doctorFee = 300 * daysStayed; /// mohamed wrote that line
+	    }
+	    // if patient stayed for more than 15 days, charge them 600 per day for room and 200 per day as doctor's fee /// mohamed wrote that line
+	    else /// mohamed wrote that line
+	    {
+	    roomCharge = 600 * daysStayed; /// mohamed wrote that line
+	    doctorFee = 200 * daysStayed; /// mohamed wrote that line
+	    }
+	    // ask user to input price of medicines taken /// mohamed wrote that line
+	    System.out.println("Enter the price of medicines taken : "); /// mohamed wrote that line
+	    medPrice = keyboard.nextDouble(); /// mohamed wrote that line
+	    
+	    // calculate total fee by adding room charge, doctor's fee and medicine's charge /// mohamed wrote that line
+	    totalFee = roomCharge + doctorFee + medPrice + cleaningFee;  /// mohamed wrote that line
+	    
+	    
+	   
+	    
+	    
+	    		
+	    
+	    
+	    
+	    System.out.println("This is the information you enterd and the receipt :*\n "); ///Omar wrote that line
+	    System.out.println("First name : " + Name);  // Output user input ///Omar wrote that line
+	    System.out.println("Patient address : " + Address);  // Output user input ///Omar wrote that line
+	    System.out.println("Patient contact number : " + Phone); // Output user input ///Omar wrote that line
+	    System.out.println("Patient Email Address : " + Email); // Output user input ///Omar wrote that line
+	    System.out.println("This is the doctor you selected : "+ SelectDepartment); // Output user input ///Omar wrote that line
+	    System.out.println("medical issue Entered: "+ medicalIssue );// Output user input ///Omar wrote that line
+	    System.out.println("recipt: " + totalFee); // total Fee output ///Omar wrote that line
+	    
+	    
+	    
+	    keyboard.close(); // keyboard no longer in use suggested by the tool ///Omar wrote that line
+	    
+	    /// Omar main information came From DrGMC Github diffrent chapters here you can find link to the proffessor's Github
+	    ///https://github.com/DrGMC/JAVA
+	     
+           
+	    
+		
+		
+		
+	}
+}
